@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estimated Price</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Estimated Price</h1>
+    <div class="card">
+      <div class="price">₹ {{ "{:,}".format(pred_price) }}</div>
+      <p class="muted">Based on the details you entered.</p>
+    </div>
+
+    <h2>Details</h2>
+    <ul class="details">
+      <li><strong>Make:</strong> {{ details['make'] }}</li>
+      <li><strong>Model:</strong> {{ details['model'] }}</li>
+      <li><strong>Year:</strong> {{ details['year'] }}</li>
+      <li><strong>Mileage (km):</strong> {{ details['mileage_km'] }}</li>
+      <li><strong>Fuel Type:</strong> {{ details['fuel_type'] }}</li>
+      <li><strong>Transmission:</strong> {{ details['transmission'] }}</li>
+      <li><strong>Owner Count:</strong> {{ details['owner_count'] }}</li>
+      <li><strong>Location City:</strong> {{ details['location_city'] }}</li>
+      <li><strong>Engine CC:</strong> {{ details['engine_cc'] }}</li>
+      <li><strong>Power (BHP):</strong> {{ details['power_bhp'] }}</li>
+      <li><strong>Seats:</strong> {{ details['seats'] }}</li>
+    </ul>
+
+    <a href="/" class="btn">Estimate Another</a>
+  </div>
+</body>
+</html>

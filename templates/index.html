@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Price Estimator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Car Price Estimator</h1>
+    <p class="subtitle">Enter your car details to estimate its fair price (INR).</p>
+
+    <form action="/predict" method="post" class="grid">
+      <label>Make
+        <input name="make" placeholder="e.g., Hyundai" required>
+      </label>
+      <label>Model
+        <input name="model" placeholder="e.g., i20" required>
+      </label>
+      <label>Year
+        <input type="number" name="year" min="1995" max="2025" value="2018" required>
+      </label>
+      <label>Mileage (km)
+        <input type="number" name="mileage_km" min="0" value="45000" required>
+      </label>
+      <label>Fuel Type
+        <select name="fuel_type">
+          <option>Petrol</option>
+          <option>Diesel</option>
+          <option>CNG</option>
+          <option>Hybrid</option>
+          <option>Electric</option>
+        </select>
+      </label>
+      <label>Transmission
+        <select name="transmission">
+          <option>Manual</option>
+          <option>Automatic</option>
+        </select>
+      </label>
+      <label>Owner Count
+        <input type="number" name="owner_count" min="1" max="5" value="1">
+      </label>
+      <label>Location City
+        <input name="location_city" placeholder="e.g., Hyderabad" value="Hyderabad">
+      </label>
+      <label>Engine CC
+        <input type="number" name="engine_cc" min="600" max="6000" value="1200">
+      </label>
+      <label>Power (BHP)
+        <input type="number" step="0.1" name="power_bhp" min="30" max="500" value="85.0">
+      </label>
+      <label>Seats
+        <input type="number" name="seats" min="2" max="9" value="5">
+      </label>
+
+      <button type="submit" class="btn">Estimate Price</button>
+    </form>
+
+    <p class="footnote">Tip: Be accurate about year and mileage for best results.</p>
+  </div>
+</body>
+</html>
