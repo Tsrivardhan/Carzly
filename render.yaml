@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: veloquantica
+    name: carzly
     env: python
     plan: free
     rootDir: .
