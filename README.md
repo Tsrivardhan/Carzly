@@ -1,4 +1,4 @@
-# Car Price Estimator (Flask + scikit-learn)
+# carzly(Flask + scikit-learn)
 
 A minimal, production-ready example that trains a regression model to predict used car prices and serves predictions with a Flask web app.
 
@@ -8,7 +8,7 @@ A minimal, production-ready example that trains a regression model to predict us
 - Sample dataset included (`data/car_listings.csv`) so you can train immediately
 - Form-based HTML UI (no JavaScript required)
 - Model metrics printed after training (MAE, RMSE, R^2)
-- Saves the trained pipeline to `models/car_price_pipeline.joblib`
+- Saves the trained pipeline to `models/carzly_pipeline.joblib`
 
 ## Quickstart
 
@@ -27,7 +27,7 @@ python train.py
 python app.py
 ```
 
-Then open: http://127.0.0.1:5000
+Then open: http://10.108.184.27:5000
 
 ## Data Schema
 
